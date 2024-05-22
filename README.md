@@ -68,3 +68,36 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+requirements
+//header
+//dark mode
+//light theme
+//search engine
+// api integration for search api
+// filter by region section
+// api integration for filter
+// country cards
+// title, polpulation, region, capital, flag image
+// api integration
+// on click redirect to new page of country info
+// Back button functionalities
+
+
+
+// 1=> common css files all common color code
+// 2=> usetheme context
+// 3=> context api
+// 4=> axios
+// 5=> promises for fetching api
+// 6=> components
+// Header component
+// search component
+// filter component
+// cards component
+// context theme component
+// country detail component
+// back button
+// page not found
