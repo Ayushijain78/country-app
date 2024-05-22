@@ -1,0 +1,27 @@
+@import "../../../styles//variable.scss";
+
+.home {
+  &__container {
+    @include flex;
+  }
+  &__country_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    margin-top: 20px;
+    gap: 60px;
+  }
+}
+@include for-phone-only {
+  .home {
+    &__container {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__country_cards {
+      grid-template-columns: repeat(1, 2fr);
+      gap: 30px;
+    }
+  }
+}

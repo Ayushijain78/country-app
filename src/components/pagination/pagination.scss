@@ -1,0 +1,23 @@
+@import "../../styles/variable.scss";
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 40px;
+  button{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid var(--bg-color);
+  }
+}
+
+.active {
+  background-color: var(--button-color);
+  color: var(--text-color);
+}
+.disabled{
+  color: var(--text-color);
+}

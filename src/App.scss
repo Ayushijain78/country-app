@@ -1,0 +1,31 @@
+@import "../src/styles/variable.scss";
+[data-theme="light"] {
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: $font-color;
+  --heading-color: $font-color;
+  --shadow: 0px 1px 10px #ddd;
+  --container-bg: hsl(0, 0%, 98%);
+  --button-color: rgb(138, 236, 138);
+}
+[data-theme="dark"] {
+  --text-color: hsl(0, 0%, 98%);
+  --heading-color: #ffff;
+  --container-bg: #202c36;
+  --header-bg-color: #2b3844;
+  --bg-color: #2b3844;
+  --button-color: 2b3844
+}
+body {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  padding: 40px 50px;
+  margin-top: 60px;
+}
+@include for-phone-only {
+  .container {
+    padding: 30px 20px;
+  }
+}

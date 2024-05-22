@@ -1,0 +1,43 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-dark: #202c36;
+$font-color: #111517;
+
+@mixin flex($gap: 2px, $justifyContent: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $justifyContent;
+  gap: $gap;
+}
+
+@mixin card($color: $color_white) {
+  width: 100%;
+  max-width: 500px;
+  min-width: 400px;
+  box-shadow: 0px 1px 2px #ccc;
+}
+
+@mixin heading($fontSize: 12px, $color: $font-color, $fontWeight: 400) {
+  font-size: $fontSize;
+  color: $color;
+  font-weight: $fontWeight;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin for-tab-and-web-only {
+  @media (min-width: 768px) and (max-width: 1024px) {
+  }
+}
+
+.down {
+  rotate: 180deg;
+  transition: ease-in 0.2s;
+}
+.up {
+  transition: ease-in 0.2s;
+}

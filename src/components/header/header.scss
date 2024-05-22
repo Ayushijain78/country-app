@@ -1,0 +1,35 @@
+@import "../../styles/variable.scss";
+
+.header {
+  &__container {
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    @include flex(5px, space-between);
+    height: 30px;
+    padding: 15px 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 30px;
+    z-index: 2;
+  }
+  &__text {
+    @include heading(24px, "", 800);
+  }
+  &__themeIcon {
+    @include flex;
+    cursor: pointer;
+  }
+}
+@include for-phone-only {
+  .header {
+    &__container {
+      font-size: 14px;
+      padding: 15px 20px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

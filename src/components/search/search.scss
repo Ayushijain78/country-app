@@ -1,0 +1,48 @@
+@import "../../styles/variable.scss";
+
+.search {
+  &__wrapper {
+    flex-basis: 40%;
+  }
+  &__container {
+    background-color: var(--bg-color);
+    padding: 5px 20px;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+  }
+  &__box_container {
+    @include flex(2px, flex-start);
+  }
+  &__box {
+    border: none;
+    width: 250px;
+    padding: 10px;
+    background-color: inherit;
+    color: var(--heading-color);
+  }
+  &__box::placeholder {
+    color: var(--heading-color);
+  }
+  &__box:focus {
+    border: none;
+    outline: none;
+  }
+
+  &__wrapper:focus {
+    border: 1px solid;
+  }
+}
+@include for-phone-only {
+  .search {
+    &__wrapper {
+      @include flex(0px, space-between);
+    }
+    &__container {
+      flex: 1;
+    }
+    &__box {
+    }
+  }
+}
