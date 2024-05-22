@@ -12,8 +12,8 @@ function App() {
       <Header />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/country/:countryName" element={<CountryDetails />} />
+          <Route path="/country-app" element={<Home />}></Route>
+          <Route path="/country-app/country/:countryName" element={<CountryDetails />} />
         </Routes>
       </div>
     </ThemeProvider>

@@ -65,7 +65,7 @@ const Home = () => {
   if (countryListLoading) return <p>Loading...</p>;
   if (countryListError) return <p>Error loading data</p>;
   const handleCountryClick = (countryName, country) => {
-    navigate(`/country/${countryName}`, { state: { country } });
+    navigate(`/country-app/country/${countryName}`, { state: { country } });
   };
   return (
     <div>
