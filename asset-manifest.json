@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/country-app/static/css/main.bfa1eb28.css",
+    "main.js": "/country-app/static/js/main.bbe097d3.js",
+    "static/js/453.2e8b6b5b.chunk.js": "/country-app/static/js/453.2e8b6b5b.chunk.js",
+    "index.html": "/country-app/index.html",
+    "static/media/theme.svg": "/country-app/static/media/theme.b3bfe04e62fcbcc04727205589a48110.svg",
+    "static/media/searchIcon.svg": "/country-app/static/media/searchIcon.21e8f6c9776c1c0488c10031d1287dd2.svg",
+    "static/media/searchIconWhite.svg": "/country-app/static/media/searchIconWhite.6e3e4b1bdefa0bce195cc13469e7c356.svg",
+    "static/media/arrowWhiteIcon.svg": "/country-app/static/media/arrowWhiteIcon.55a3ac9c096bc70f105d054a81299a62.svg",
+    "static/media/downArrow.svg": "/country-app/static/media/downArrow.a13ecc2a0bf752050cb1d61b25462c37.svg",
+    "main.bfa1eb28.css.map": "/country-app/static/css/main.bfa1eb28.css.map",
+    "main.bbe097d3.js.map": "/country-app/static/js/main.bbe097d3.js.map",
+    "453.2e8b6b5b.chunk.js.map": "/country-app/static/js/453.2e8b6b5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfa1eb28.css",
+    "static/js/main.bbe097d3.js"
+  ]
+}
