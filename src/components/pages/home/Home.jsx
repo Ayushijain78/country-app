@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Search from "../../search/Search";
+import { useMediaPredicate } from "react-media-hook";
 import { useNavigate } from "react-router-dom";
 import "./home.scss";
 import Dropdown from "../../dropdown/Dropdown";
@@ -9,6 +10,7 @@ import { COUNTRY_URL } from "../../../api/countryController";
 import Pagination from "../../pagination/Pagination";
 
 const Home = () => {
+  const isMobile = useMediaPredicate("(max-width: 767px)");
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -67,6 +69,7 @@ const Home = () => {
   const handleCountryClick = (countryName, country) => {
     navigate(`/country-app/country/${countryName}`, { state: { country } });
   };
+  const countryListData = isMobile ? countryList : paginationData;
   return (
     <div>
       <div className="home__container">
@@ -74,7 +77,7 @@ const Home = () => {
         <Dropdown options={filterOptions} getSelectedValue={getSelectedValue} />
       </div>
       <div className="home__country_cards">
-        {paginationData.map((country) => (
+        {countryListData?.map((country) => (
           <CountryCard
             onClick={() => handleCountryClick(country?.name?.common, country)}
             key={country?.name?.common}
@@ -86,12 +89,16 @@ const Home = () => {
           />
         ))}
       </div>
-      <Pagination
-        dataLength={filteredData.length}
-        dataPerPage={dataPerPage}
-        currentPage={currentPage}
-        handlePageClick={handlePageClick}
-      />
+      {!isMobile ? (
+        <Pagination
+          dataLength={filteredData.length}
+          dataPerPage={dataPerPage}
+          currentPage={currentPage}
+          handlePageClick={handlePageClick}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

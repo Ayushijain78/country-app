@@ -54,14 +54,13 @@ const CountryDetails = () => {
               {CONSTANT.POPULATION}:<span>{country?.population || ""}</span>
             </p>
           </div>
-          {country?.borders && (
-            <div className="country__border">
-              <p>{CONSTANT.BORDER_COUNTRY}</p>
-              <div className="country__flex">{renderButton()}</div>
-            </div>
-          )}
+          {country?.borders&&<div className="country__border">
+            <p>{CONSTANT.BORDER_COUNTRY}</p>
+            <div className="country__flex">{renderButton()}</div>
+          </div>}
         </div>
       </div>
+     
     </div>
   );
 };
